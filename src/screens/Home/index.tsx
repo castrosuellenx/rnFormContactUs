@@ -2,8 +2,8 @@ import React from 'react';
 
 import * as S from './styles';
 import Header from '../../components/Header';
-import WrapperForm from './WrapperForm';
-import WrapperContact from './WrapperContact';
+import Form from './Form';
+import Contact from './Contact';
 
 const Home: React.FC = () => {
   return (
@@ -11,8 +11,8 @@ const Home: React.FC = () => {
       <Header />
 
       <S.Container>
-        <WrapperForm />
-        <WrapperContact />
+        <Form />
+        <Contact />
       </S.Container>
     </S.Container>
   );

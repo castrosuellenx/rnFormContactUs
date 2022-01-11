@@ -8,6 +8,7 @@ export default {
     black: '#5E5F8B',
     lightWhite: '#DBDBDB',
     fullWhite: '#FFFFFF',
+    gray: '#DDDDE6',
   },
 
   fontFamily: {
