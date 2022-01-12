@@ -9,6 +9,7 @@ export default {
     lightWhite: '#DBDBDB',
     fullWhite: '#FFFFFF',
     gray: '#DDDDE6',
+    red: '#932020',
   },
 
   fontFamily: {

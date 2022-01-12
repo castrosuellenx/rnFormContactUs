@@ -3,7 +3,6 @@ import RFValue from '../../../utils/RFValue';
 
 export const Container = styled.View`
   width: 95%;
-  height: 30%;
   background-color: ${({theme}) => theme.colors.primary};
   align-self: center;
   border-radius: ${RFValue(20)}px;
@@ -11,7 +10,9 @@ export const Container = styled.View`
   justify-content: space-evenly;
 `;
 
-export const Inner = styled.View``;
+export const Inner = styled.View`
+  margin-top: ${RFValue(20)}px;
+`;
 
 export const Title = styled.Text`
   font-family: ${({theme}) => theme.fontFamily.medium};
@@ -46,6 +47,7 @@ export const WrapperInfoButton = styled.View`
 export const WrapperInfos = styled.View`
   flex-direction: row;
   align-self: center;
+  margin-bottom: ${RFValue(20)}px;
 `;
 
 export const RowDirection = styled.View`

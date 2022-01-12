@@ -10,10 +10,10 @@ const Home: React.FC = () => {
     <S.Container>
       <Header />
 
-      <S.Container>
+      <S.Scroll>
         <Form />
         <Contact />
-      </S.Container>
+      </S.Scroll>
     </S.Container>
   );
 };

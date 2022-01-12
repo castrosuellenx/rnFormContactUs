@@ -3,7 +3,6 @@ import RFValue from '../../../utils/RFValue';
 
 export const Container = styled.View`
   width: 95%;
-  height: 65%;
   background-color: ${({theme}) => theme.colors.fullWhite};
   margin-vertical: ${RFValue(10)}px;
   align-self: center;
@@ -15,5 +14,25 @@ export const Title = styled.Text`
   font-size: ${RFValue(14)}px;
   color: ${({theme}) => theme.colors.black};
   text-align: center;
-  margin-top: ${RFValue(20)}px;
+  margin-vertical: ${RFValue(20)}px;
+`;
+
+export const Scroll = styled.ScrollView``;
+
+export const InputField = styled.TextInput`
+  width: 100%;
+  height: 100%;
+  font-family: ${({theme}) => theme.fontFamily.regular};
+  font-size: ${RFValue(12)}px;
+  color: ${({theme}) => theme.colors.black};
+  text-align-vertical: bottom;
+`;
+
+export const ErrorText = styled.Text`
+  font-family: ${({theme}) => theme.fontFamily.regular};
+  font-size: ${RFValue(12)}px;
+  color: ${({theme}) => theme.colors.red};
+  text-align: center;
+  margin-top: ${RFValue(-10)}px;
+  margin-bottom: ${RFValue(20)}px;
 `;
