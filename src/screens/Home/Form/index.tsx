@@ -48,6 +48,7 @@ const Form: React.FC = () => {
           values,
           errors,
           touched,
+          isValid,
         }) => (
           <>
             <Input title="First Name">
@@ -128,7 +129,11 @@ const Form: React.FC = () => {
               <S.ErrorText>{errors.message}</S.ErrorText>
             )}
 
-            <ButtonPrimary title="SEND MESSAGE" onPress={handleSubmit} />
+            <ButtonPrimary
+              title="SEND MESSAGE"
+              onPress={handleSubmit}
+              disabled={!isValid}
+            />
           </>
         )}
       </Formik>

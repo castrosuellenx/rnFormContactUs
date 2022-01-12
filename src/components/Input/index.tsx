@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
-import {useTheme} from 'styled-components/native';
 
 import * as S from './styles';
 
@@ -27,8 +26,6 @@ const Input: React.FC<Props> = ({
   onPress = value => {},
   children,
 }) => {
-  const theme = useTheme();
-
   return (
     <>
       {!select && !multiline && (

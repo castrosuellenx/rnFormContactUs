@@ -4,12 +4,18 @@ import * as S from './styles';
 
 export type Props = {
   title: string;
-  onPress(): void;
+  onPress: () => void;
+  disabled?: boolean;
 };
 
-const ButtonPrimary: React.FC<Props> = ({title, onPress, ...rest}) => {
+const ButtonPrimary: React.FC<Props> = ({
+  title,
+  onPress,
+  disabled = false,
+  ...rest
+}) => {
   return (
-    <S.Container onPress={onPress} {...rest}>
+    <S.Container onPress={onPress} disabled={disabled} {...rest}>
       <S.Title>{title}</S.Title>
     </S.Container>
   );
