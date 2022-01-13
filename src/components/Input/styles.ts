@@ -16,8 +16,6 @@ export const Container = styled.View<Props>`
   margin-bottom: ${RFValue(20)}px;
 `;
 
-export const WrapperTitle = styled.View``;
-
 export const Title = styled.Text`
   font-family: ${({theme}) => theme.fontFamily.regular};
   font-size: ${RFValue(12)}px;

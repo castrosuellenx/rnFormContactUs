@@ -11,9 +11,7 @@ const Input: React.FC<Props> = ({title, multiline, ...rest}) => {
   return (
     <>
       <S.Container multiline={multiline}>
-        <S.WrapperTitle>
-          <S.Title>{title}</S.Title>
-        </S.WrapperTitle>
+        <S.Title>{title}</S.Title>
 
         <S.InputField multiline={multiline} {...rest} />
       </S.Container>
