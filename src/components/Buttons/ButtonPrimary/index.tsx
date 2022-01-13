@@ -1,21 +1,15 @@
 import React from 'react';
+import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 
 import * as S from './styles';
 
 export type Props = {
   title: string;
-  onPress: () => void;
-  disabled?: boolean;
-};
+} & TouchableOpacityProps;
 
-const ButtonPrimary: React.FC<Props> = ({
-  title,
-  onPress,
-  disabled = false,
-  ...rest
-}) => {
+const ButtonPrimary: React.FC<Props> = ({title, ...rest}) => {
   return (
-    <S.Container onPress={onPress} disabled={disabled} {...rest}>
+    <S.Container {...rest}>
       <S.Title>{title}</S.Title>
     </S.Container>
   );

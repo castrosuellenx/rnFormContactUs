@@ -1,9 +1,14 @@
 import styled from 'styled-components/native';
-import RFValue from '../../utils/RFValue';
+import {RFValue} from 'react-native-responsive-fontsize';
+import {TextInput} from 'react-native';
 
-export const Container = styled.View`
+type Props = {
+  multiline?: boolean;
+};
+
+export const Container = styled.View<Props>`
   width: ${RFValue(335)}px;
-  height: ${RFValue(75)}px;
+  height: ${props => (props.multiline ? RFValue(120) : RFValue(75))}px;
   background-color: ${({theme}) => theme.colors.fullWhite};
   elevation: 5;
   align-self: center;
@@ -11,17 +16,7 @@ export const Container = styled.View`
   margin-bottom: ${RFValue(20)}px;
 `;
 
-export const MultilineContainer = styled.View`
-  width: ${RFValue(335)}px;
-  height: ${RFValue(100)}px;
-  background-color: ${({theme}) => theme.colors.fullWhite};
-  elevation: 5;
-  align-self: center;
-  border-radius: ${RFValue(5)}px;
-  margin-bottom: ${RFValue(20)}px;
-`;
-
-export const WrapperTopContent = styled.View``;
+export const WrapperTitle = styled.View``;
 
 export const Title = styled.Text`
   font-family: ${({theme}) => theme.fontFamily.regular};
@@ -31,34 +26,14 @@ export const Title = styled.Text`
   margin-left: ${RFValue(10)}px;
 `;
 
-export const WrapperBottomContent = styled.View`
-  width: 100%;
-  height: 65%;
-`;
-
-export const MultilineWrapperBottomContent = styled.View`
-  width: 100%;
-  height: 75%;
-`;
-
-export const WrapperInput = styled.View`
-  width: 95%;
-  height: 80%;
-  align-self: center;
+export const InputField = styled(TextInput)<Props>`
+  width: 92%;
+  height: ${props => (props.multiline ? 68 : 55)}%;
+  font-family: ${({theme}) => theme.fontFamily.regular};
+  font-size: ${RFValue(12)}px;
+  color: ${({theme}) => theme.colors.black};
   border-bottom-color: ${({theme}) => theme.colors.gray};
   border-bottom-width: ${RFValue(1)}px;
-`;
-
-export const MultilineWrapperInput = styled.View`
-  width: 95%;
-  height: 85%;
+  text-align-vertical: bottom;
   align-self: center;
-  border-bottom-color: ${({theme}) => theme.colors.gray};
-  border-bottom-width: ${RFValue(1)}px;
-`;
-
-export const WrapperPicker = styled.View`
-  width: 100%;
-  height: 100%;
-  margin-bottom: ${RFValue(50)}px;
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import RFValue from '../../../utils/RFValue';
+import {RFValue} from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   width: 95%;
@@ -19,14 +19,14 @@ export const Title = styled.Text`
 
 export const Scroll = styled.ScrollView``;
 
-export const InputField = styled.TextInput`
+/* export const InputField = styled.TextInput`
   width: 100%;
   height: 100%;
   font-family: ${({theme}) => theme.fontFamily.regular};
   font-size: ${RFValue(12)}px;
   color: ${({theme}) => theme.colors.black};
   text-align-vertical: bottom;
-`;
+`; */
 
 export const ErrorText = styled.Text`
   font-family: ${({theme}) => theme.fontFamily.regular};
