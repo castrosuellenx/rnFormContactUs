@@ -7,7 +7,7 @@ export type Props = {
   title: string;
 } & TextInputProps;
 
-const Input: React.FC<Props> = ({title, multiline = false, ...rest}) => {
+const Input: React.FC<Props> = ({title, multiline, ...rest}) => {
   return (
     <>
       <S.Container multiline={multiline}>
